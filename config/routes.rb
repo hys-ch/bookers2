@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:edit, :index, :show]
+  resources :users, only: [:edit, :index, :show, :update]
   resources :books, only: [:new, :create, :index, :show, :edit, :destroy]
 
   post "books" => "books#create"
