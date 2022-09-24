@@ -69,6 +69,11 @@
         </div>
       </nav>
     </header>
+    <% if flash[:notice] %>
+      <p id="notice">
+        <%= flash[:notice]%>
+      </p>
+    <% end %>
     <main>
       <%= yield %>
     </main>
